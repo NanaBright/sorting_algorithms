@@ -29,7 +29,7 @@ void quick_sort_recursive(int *array, int lo, int hi, size_t size)
 {
 	int p;
 
-	if (lo < hi) 
+	if (lo < hi)
 	{
 		p = lomuto_partition(array, lo, hi, size);
 		quick_sort_recursive(array, lo, p - 1, size);
@@ -64,16 +64,16 @@ int lomuto_partition(int *array, int lo, int hi, size_t size)
 			array[j] = temp;
 			if (i != j)
 				print_array(array, size);
-	    }
-    }
+		}
+	}
 
-    if (array[i + 1] != array[hi])
-    {
-	    temp = array[i + 1];
-	    array[i + 1] = array[hi];
-	    array[hi] = temp;
-	    print_array(array, size);
-    }
+	if (array[i + 1] != array[hi])
+	{
+		temp = array[i + 1];
+		array[i + 1] = array[hi];
+		array[hi] = temp;
+		print_array(array, size);
+	}
 
-    return i + 1;
+	return (i + 1);
 }
